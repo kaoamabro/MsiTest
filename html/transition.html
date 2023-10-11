@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0901_transition</title>
+    <style>
+        .box {/* 順逆向沒差的寫在box裡 */
+            width: 100px;
+            height: 100px;
+            background-color: #acb;
+
+            /* transition: background-color 1s 2s;變化時間 延遲 */
+            /* 等同於transition: 1s 1s; */
+
+/*             transition: 
+                transform 1s 1s,
+                background-color 1s; */
+            
+            transition-property: all;
+            transition-duration: 5s;
+            transition-delay: 1s;
+            transition-timing-function: ease;
+            /* ease, ease-in, ease-out, ease-in-out, linear */
+        }
+
+        .box:hover {/* 將滑鼠移過去的效果寫在這裡 */
+            background-color: #bac;
+            transform: scale(.5);/* scale、rotate等一次只能選取一個做transition */
+            width: 800px;
+
+/*             transition: 
+                transform 1s,
+                background-color 1s 1s;    */         
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

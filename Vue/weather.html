@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1002_weather</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #app {
+            width: 250px;
+            height: fit-content;
+            background-color: #c1dee2;
+            text-align: center;
+            padding: 30px;
+            border-radius: 30px;
+            position: absolute;
+            inset:0;
+            margin: auto;
+            box-shadow: 5px 5px 20px rgb(0 0 0 / .3);
+        }
+        body {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>今日天氣{{weathers.weather[0].description}}</h2>
+        <img :src="`https://openweathermap.org/img/wn/${weathers.weather[0].icon}@2x.png`" alt="">
+        <div>平均溫度{{weathers.main.temp}}&deg;C</div>
+        <div>最高溫度{{weathers.main.temp_max}}&deg;C</div>
+        <div>最低溫度{{weathers.main.temp_min}}&deg;C</div>
+        <div>體感溫度{{weathers.main.feels_like}}&deg;C</div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    weathers: ''
+                }
+            },
+            created(){
+                const url = 'https://api.openweathermap.org/data/2.5/weather?q=taipei&units=metric&lang=zh_tw&appid=dd4672c20d3412bac7ba7ea6f5ae6cc5'
+                fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    this.weathers = data;
+                })
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0823_排版</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 1200px;
+            background-color: #0aa;
+            margin-inline: auto;
+
+            display: flex;/* flex只影響第一子層(這裡指的是box而box下的h2、P不受影響)且必定為橫向排列 */
+            flex-wrap: wrap;/* <換行>：將flex中"壓縮"的特性關掉，讓其能按照設定的寬度往下排列*/
+            flex-direction: row;/* row row-reverse column column-reverse */
+            /* 上兩者合起來寫即是flex-flow：wrap column */
+
+            align-items: start;/* start(置頂) end(置底) center(置中) stretch(延伸到整個區塊) baseline */
+
+            justify-content: center;/* start(置左) end center space-around space-between space-evenly */
+        }
+
+        .box {
+            width: 300px;/* 若內容不同且不限制寬度會為了讓高度相同而分配其寬度造成不同寬 */
+            padding: 30px;/* padding內距；margin外距。margin不會被box-sizing影響，因為他是在box外做更改 預設皆為往外加*/
+            box-sizing: border-box;/* content-box往外加；border-box往內加 */
+        }
+
+        .box:nth-of-type(odd) {
+            background-color: #aa0;
+        }
+
+        .box:nth-of-type(even) {
+            background-color:  #a0a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero saepe voluptatem omnis consectetur sed! Incidunt quidem, libero beatae architecto sed cupiditate tenetur suscipit provident? Aspernatur consequatur excepturi blanditiis at? Deleniti ut adipisci architecto itaque laborum commodi blanditiis pariatur ad, est tempore? Illum consectetur veritatis, cupiditate necessitatibus architecto ratione dolorum hic.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus error minima ratione, qui recusandae quasi corrupti reiciendis suscipit ullam repellat quod ducimus quae distinctio enim non, iste delectus doloremque aliquam.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum beatae quis, libero saepe ullam eius fuga illo asperiores, aperiam cumque molestiae assumenda dignissimos voluptates dolores!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0818_basic</title>
+    <!--外部樣式(推薦)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+    
+    <!--內部樣式(單一網頁有特定情況適用)-->
+    <style>
+        h2{
+            color: chocolate;
+        }
+
+        .abc{
+            color: #a1246d;
+        }
+
+        .def{
+            color: rgb(226, 1, 1);
+        }
+
+        .ghi{
+            color: blue!important;
+        }
+
+        #xyz{
+            color: rgb(42, 175, 175);
+        }
+    </style>
+</head>
+<body>
+    <!--嵌入式樣式-->
+    <h1 style="color: rgb(13, 65, 110);">CSS Cascading Style Sheet</h1>
+    <p style="color: #709912;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    
+    <!--內部樣式-->
+    <h2>這是頑童你知道的</h2>
+    <!---->
+    <ul>
+        <li>list</li>
+        <li class="abc">list</li>
+        <li id="xyz">list</li>
+        <li class="abc">list</li>
+        <li class="abc def">list</li>
+        <li class="abc def" id="xyz">list</li>
+        <li class="abc def" id="xyz" style="color: forestgreen;">list</li>
+        <li class="ghi abc def" id="xyz" style="color: forestgreen;">list</li>
+    </ul> 
+
+
+</body>
+</html>

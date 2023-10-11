@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0901_transform</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #abc;
+
+            transform: perspective(1000px)rotate(30deg);/* perspective透視點 */
+            /* 
+                scale(), scaleX(), scaleY(), scaleZ() 放大
+                rotate(), rotateX(), rotateY(), rotateZ() 旋轉
+                translate(), translateX(), translateY(), translateZ() 拉近放遠
+                skew(), skewX(), skewY() 傾斜
+             */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

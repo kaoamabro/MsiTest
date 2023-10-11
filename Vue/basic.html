@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0927_vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <h2>{{author}}</h2>
+        <div>{{qty > 0 ? '貨源充足':'補貨中'}}</div>
+        <a v-bind:href="link">yahoo</a><br>
+        <a :href="link" target="_blank">yahoo</a>
+        <input type="text" v-model="value">{{value}}<!-- 表單一定是雙向綁定 -->
+        <a href="#" @click="test()">click</a><!-- v-on: 等於@ -->
+        <div>
+            <div v-for="product,idx of products">
+                {{product}} / {{idx}}
+            </div>
+            <div v-for="f of foods">
+                {{f.name}}:{{f.price}}
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    title: 'Hello Vue',
+                    author: 'Zac',
+                    qty: 10,
+                    link: 'https://tw.yahoo.com',
+                    style: 'active',
+                    value: 'hello',
+                    products:['iPhone 15','iPhone 15 Plus','iPhone 15 Pro','iPhone 15 Pro Max'],
+                    foods:[
+                            {
+                                id: 1,
+                                name: '滷肉飯',
+                                price: '190'
+                            },
+                            {
+                                id: 2,
+                                name: '牛肉麵',
+                                price: '500'
+                            },
+                            {
+                                id:3,
+                                name:'臭豆腐',
+                                price: '990'
+                            },
+                            {
+                                id:4,
+                                name:'排骨飯',
+                                price: '500'
+                            }
+                        ]
+
+                }
+            },
+            methods:{
+                test() {
+                    alert('hello test');
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

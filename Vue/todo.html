@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1002_todo</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form action="jabascript:;">
+            <input type="text" v-model="input">
+            <input type="button" value="add" @click="add()">
+        </form>
+        <div>
+            <h2>已完成</h2>
+            <form action="#">
+                <div v-for="todo in isComplete" :key="todo.id"><!-- 不能把索引值當作主鍵，所以要重新設定主鍵 -->
+                    {{todo.title}}
+                    <input type="checkbox" v-model="todo.isCompleted">
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div>
+            <h2>未完成</h2>
+            <form action="#">
+                <div v-for="todo in unComplete" :key="todo.id">
+                    {{todo.title}}
+                    <input type="checkbox" v-model="todo.isCompleted">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    input: '',
+                    todos: [
+                        {
+                            id: 1,
+                            title: '做作業',
+                            isCompleted: true
+                        },
+                        {
+                            id: 2,
+                            title: '洗碗',
+                            isCompleted: false
+                        },
+                    ]
+                }
+            },
+            methods:{
+                add(){
+                    this.todos.push({
+                        id:Date.now(),
+                        title:this.input,
+                        isCompleted:false
+                    });
+                    alert('已加入'+this.input);/* 這裡的this在vue的框架下，所以指的是data裡的東西 */
+                    this.input = '';
+                }
+            },
+            computed:{
+                isComplete(){
+                    return this.todos.filter(data => data.isCompleted === true);
+                },
+                unComplete(){
+                    return this.todos.filter(data => data.isCompleted === false);
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

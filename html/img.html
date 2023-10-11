@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0825_img</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;/* 為了避免行內元素(img)被包在區塊裡會在下面空出4px的空隙 */
+
+            object-fit: cover;
+        }
+
+        .box {
+            width: 678px;
+            aspect-ratio: 16/9;
+            background-color: #088;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="http://picsum.photos/id/100/800/600" alt="">
+    </div>
+</body>
+</html>

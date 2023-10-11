@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0920_array-2</title>
+</head>
+<body>
+    <script>
+        const foods = [
+            {
+                id: 1,
+                name:'滷肉飯',
+                price:'190'
+            },
+            {
+                id: 2,
+                name:'牛肉麵',
+                price:'300'
+            },
+            {
+                id: 3,
+                name:'雞排',
+                price:'599'
+            }
+        ];
+
+/*         foods.forEach(function(data,idx) {
+            console.log(idx);
+            console.log(data.name);
+            console.log(data.price);
+        }) */
+
+        //map
+        const food_name = foods.map(function(data) {
+            return data.name;
+        });
+        const food_price = foods.map(function(data) {
+            return data.price;
+        });
+        
+        //filter
+        const expensive = foods.filter(function(data) {
+            return data.price > 300;
+        });
+        const beef = foods.filter(function(data) {
+            return data.name != '牛肉麵';
+        });
+
+        //find
+        const food_find = foods.find(function(data) {
+            return data.name === '牛肉麵';
+        });
+        const food_index = foods.findIndex(function(data) {
+            return data.price === '599';
+        });
+
+        //some
+        const food_some = foods.some(function(data) {
+            return data.price === '500';
+        });
+
+        //every
+        const food_every = foods.every(function(data) {
+            return data.price > 0;
+        });
+
+        const total = food_price.reduce(function(a,b,idx) {
+            console.log(idx);
+            console.log('a:'+a);
+            console.log('b:'+b);
+            return Number(a) + Number(b);
+        });
+
+        console.log(total)
+        
+    </script>
+</body>
+</html>

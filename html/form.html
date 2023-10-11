@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0816_form</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div>
+        <!--name一定要給且一次只會對應一個-->
+        <!--只要是能自行輸入的都不用value-->
+        <!--for和id輸入相同即可建立關聯性(點字即可)，主要是使用者體驗差異-->
+            <label for="">姓名</label>
+            <input type="text" id="" name="name" value="預設值">
+        </div>
+        <div>
+            <label for="">密碼</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label for="">生日</label>
+            <input type="date" name="date">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="">時間</label>
+            <input type="datetime-local" name="time">
+        </div>
+        <div>
+            <label for="">數量</label>
+            <input type="number" name="number">
+        </div>
+        <div>
+            <label for="gender">性別</label>
+
+            <input type="radio" name="gender" value="男" id="male">
+            <label for="male">男</label>
+            <input type="radio" name="gender" value="女" id="female">
+            <label for="female">女</label>
+        </div>
+        <div>
+            <label for="multiSelect">多選</label>
+            
+            <input type="checkbox" name="multiSelect" value="A" id="A">
+            <label for="A">A</label>
+            <input type="checkbox" name="multiSelect" value="B" id="B">
+            <label for="B">B</label>
+            <input type="checkbox" name="multiSelect" value="C" id="C">
+            <label for="C">C</label>
+        </div>
+
+        <!--下拉式選單-->
+        <div>
+            <label for="edu">學歷</label>
+            <select name="edu" id="edu">
+                <option value="國小">國小</option>
+                <option value="國中">國中</option>
+                <option value="高中職">高中職</option>
+                <option value="大專院校">大專院校</option>
+                <option value="研究所以上">研究所以上</option>
+            </select>
+        </div>
+
+        <!--可選預設選項或是自行填入選項之表單-->
+        <div>
+            <label for="dinnerlist">清單</label>
+            <input type="text" list="dinner" name="dinner" id="dinnerlist">
+            <datalist id="dinner">
+                <option value="咖哩">咖哩</option>
+                <option value="牛肉麵">牛肉麵</option>
+                <option value="水餃">水餃</option>
+            </datalist>
+        </div>
+
+        <!--內容(不常見)-->
+        <div>
+            <label for="">內容</label><br>
+            <textarea name="content" id="content" cols="50" rows="5"></textarea>
+        </div>
+
+        <!--按鈕-->
+        <div>
+            <input type="submit" value="送出">
+            <input type="reset" value="清除">
+            <input type="button" value="自定義">
+        </div>
+
+        <div>
+            <button type="submit">送出</button>
+            <button type="reset">清除</button>
+            <button type="button">自定義</button>
+        </div>
+
+    </form>
+</body>
+</html>

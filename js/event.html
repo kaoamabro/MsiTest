@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0922_event</title>
+    <style>
+        p {
+            transition: 500ms;
+        }
+        .red {
+            color: red;
+            background-color: #ccc;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button class="add">Add</button>
+    <button class="remove">Remove</button>
+    <button class="toggle">Toggle</button>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis suscipit dignissimos sit libero quam alias, provident nisi neque nam velit optio eos nulla repellat a quidem tempora deleniti ducimus magnam?
+    </p>
+    <script>
+        let add = document.querySelector('.add');
+        let remove = document.querySelector('.remove');
+        let toggle = document.querySelector('.toggle');
+        let p = document.querySelector('p');
+
+        // add.onclick = () => {
+        //     p.classList.add('red');
+        // }
+        // remove.onclick = () => {
+        //     p.classList.remove('red');
+        // }
+        // toggle.onclick = () => {
+        //     p.classList.toggle('red');
+        // }
+        // function add(){
+        //     p.classList.add('red');
+        // }
+        // function remove(){
+        //     p.classList.remove('red');
+        // }
+        // function toggle(){
+        //     p.classList.toggle('red');
+        // }
+        add.addEventListener('click',function(){
+            p.classList.add('red');
+        });
+        function rm(){
+            p.classList.remove('red');
+        }
+        remove.addEventListener('click',rm);
+
+        toggle.addEventListener('click',() => {
+            p.classList.toggle('red');
+        },false);
+        // 事件冒泡
+    </script>
+</body>
+</html>

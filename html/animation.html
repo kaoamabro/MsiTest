@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0904_animation</title>
+    <style>
+        .container {
+            height: 100vh;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #a01;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            /* animation: a3 5s; */
+            animation-name: a1;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            animation-iteration-count: 999;/* numbers infinite */
+            animation-direction: alternate;/* normal reverse alternate alternate-reverse */
+            animation-fill-mode: forwards;/* forwards backwards */
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #f99;
+            position: absolute;
+            inset: 0;/* 等同於left, right, top, bottom皆為0 */
+            margin: auto;
+            animation: loading 3s infinite;
+        }
+
+        @keyframes loading {
+            to {
+                transform: rotate(-720deg);
+            }
+            
+        }
+
+        @keyframes a1 {
+            to {
+                top: calc(100% - 100px);
+                left: calc(100% - 100px);
+            }
+        }
+        
+        @keyframes a2 {
+            0% {}
+            25% {transform: translateX(600px)translateY(0);}
+            50% {transform: translateX(600px)translateY(600px);}
+            75% {transform: translateX(0)translateY(600px);}
+            100% {}
+        }
+
+        @keyframes a3 {
+            0% {}
+            20% {transform: translateX(600px)translateY(0);}
+            40% {transform: translateX(600px)translateY(600px);}
+            50% {transform: translateX(0)translateY(600px);}
+            90% {transform: translateX(0)translateY(300px);}
+            100% {}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

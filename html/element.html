@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0816_element</title>
+</head>
+<body>
+    <!--影響範圍為整個區塊，因此下個div會直接往下擠-->
+    <div>區塊block</div>
+    <div>區塊block</div>
+    <div>區塊block</div>
+    <!--影響範圍只有自己，因此下個span不會直接往下擠，直接放旁邊-->
+    <!--目前只有<span><a href=""><img(圖片)>為行內元素-->
+    <span>行內inline</span>
+    <span>行內inline</span>
+    <span>行內inline</span>
+    <span>行內inline</span>
+</body>
+</html>
