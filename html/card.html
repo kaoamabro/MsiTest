@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0825_card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;/* 為了避免行內元素(img)被包在區塊裡會在下面空出4px的空隙 */
+
+            object-fit: cover;
+            aspect-ratio: 16/9;
+            /* 如果寫在box裡面，當遇到display: flex; flex-direction:  column;會失靈，因此會擺到img裡面 */
+            /* 抑或是使用vertical-align: bottom; */
+            /* vertical-align只有在table，inline，inline-block有效 */
+        }
+
+        .card {
+            width: 400px;
+            height: 00px;
+            background-color: #aaa;
+
+            display: flex;
+            flex-direction:  column;
+        }
+
+        .card-cover {
+            background-color: #088;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            text-align: right;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-cover">
+            <img src="http://picsum.photos/800/600" alt="">
+        </div>
+        <div class="card-body">
+            <h3>title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint veritatis minima aspernatur quos odio, similique soluta recusandae quam tempore quidem beatae obcaecati aut libero reiciendis. Deserunt, facere delectus.
+            </p>
+        </div>
+        <div class="card-footer">
+            <a href="#">更多</a>
+        </div>
+    </div>
+</body>
+</html>

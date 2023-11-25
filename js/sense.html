@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0922_sense</title>
+</head>
+<body>
+    <script>
+        //var 可以重新宣告 且一律宣告為全域變數 使用funciton scope
+        //let 不可以重新宣告 可以重新賦值 使用block scope
+        //const 不行重新賦值
+        let x = 999;
+        //function scope
+        function test() {
+            let a = '100';
+            console.log(a);
+            console.log(x);
+        }
+
+        //block scope
+        if(x){
+            // console.log(x);
+            var y = 123;
+            // console.log(y)
+        }
+        // console.log(y);
+        //箭頭函式的this一律指向windows
+
+        const obj = {
+            name: 'john',
+            mail: 'asdf@mail.com',
+            active: function(){
+                return this.name;
+            },
+            active2: () => {
+                return this.name;
+            }
+        }
+
+        console.log(obj.active());
+        console.log(obj.active2());
+
+    </script>
+</body>
+</html>

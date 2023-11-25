@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0825_card_2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+        
+        .container {
+            max-width: 1600px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-inline: auto;
+        }
+
+        .col {
+            flex: 1 1 300px;
+            padding: 15px;
+        }
+
+        .card {
+            background-color: #aaa;
+            border: 1px solid #000;
+            box-shadow:  3px 3px 3px 3px;
+            /* x y 模糊程度 色彩 */
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            text-align: right;
+            padding: 10px;
+        }
+
+        .card-cover img {
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 16/9;
+        }
+
+        .card-footer a {
+            text-decoration: none;
+            background-color: #181;
+            color: aqua;
+            display: inline-block;
+            text-align: center;
+            padding: 8px 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="http://picsum.photos/800/600" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint veritatis minima aspernatur quos odio, similique soluta recusandae quam tempore quidem beatae obcaecati aut libero reiciendis. Deserunt, facere delectus.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">更多</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="http://picsum.photos/800/600" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint veritatis minima aspernatur quos odio, similique soluta recusandae quam tempore quidem beatae obcaecati aut libero reiciendis. Deserunt, facere delectus.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">更多</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="http://picsum.photos/800/600" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint veritatis minima aspernatur quos odio, similique soluta recusandae quam tempore quidem beatae obcaecati aut libero reiciendis. Deserunt, facere delectus.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">更多</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="http://picsum.photos/800/600" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint veritatis minima aspernatur quos odio, similique soluta recusandae quam tempore quidem beatae obcaecati aut libero reiciendis. Deserunt, facere delectus.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">更多</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

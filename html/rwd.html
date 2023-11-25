@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0906_RWD</title>
+    <style>
+        body {/* 預設為手機版 */
+            background-color: paleturquoise;
+        }
+
+        /* 媒體寬度判斷 */
+/*         @media screen and (min-width: 600px) { 平板版 
+            body {
+                background-color: pink;
+            }
+        }
+
+        @media screen and (min-width: 1000px) { PC版 
+            body {
+                background-color: palegreen;
+            }
+        } */
+
+        @media (min-width: 960px) {/* 使用min-width是為了效能最大化，手機版吃最少效能 */
+            body {
+                background-color: pink;
+            }
+        }
+
+        @media (width > 1024px) {
+            body {
+                background-color: palegreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

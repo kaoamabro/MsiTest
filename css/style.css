@@ -1,0 +1,358 @@
+/* nav */
+nav {
+    width: 100%;
+    /* height: 75px; 所以nav的高度沒有必要存在*/
+    background-color: #abc;
+    /* https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid */
+    /* https://cdnjs.com/ˊ常用 */
+}
+
+nav .container {
+    /* max-width: 1200px; */
+    width: 1200px;
+    height: 75px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;/* 因為height設置在nav，因此需要再在container設置高度(container本身沒有高度)才可讓align-items成立 */
+    gap: 25px;/* 只能用在flex或是grid裡面，適用在區塊裡沒有設置寬度 */
+}
+
+.nav-menu:last-of-type {
+    margin-left: auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    font-weight: bold;
+    color: #696969;
+    transition: 500ms;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: -22px;
+
+    opacity: 0;/* 透明度 */
+    transform: scaleX(0);
+    transition: 250ms;
+    transform-origin: center;/* left right center.etc */
+}
+
+.nav-link:hover {
+    color: #303030;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+.nav-logo {
+    font-size: 50px;
+}
+
+/* header */
+header {
+    width: 100%;
+    aspect-ratio: 21/9;
+    max-height: 250px;
+    /* min-height: 250px; */
+}
+
+header img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* soft */
+#soft {
+    background-color: #acb;
+    padding-block: 10px;
+}
+
+.soft-container {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: auto;
+}
+
+.soft-item {
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* card */
+#products {
+    padding-block: 80px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    padding-inline: 15px;
+}
+
+.col {
+    flex: 0 0 calc(100%/3);
+    padding: 15px;
+
+    transition: 250ms;
+}
+
+.col:hover {
+    background-color: #aaa;
+}
+
+.card-body {
+    text-align: center;
+    padding: 15px;
+}
+
+.card-cover {
+    overflow: hidden;
+}
+
+.card-cover img {
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    transition: 250ms;
+}
+
+.card-cover:hover img {
+    transform: scale(1.11);
+}
+
+/* aiot */
+#aiot {
+    background-color: #bac;
+}
+
+.aiot-side {
+    flex: 0 0 25%;
+    padding: 5px;
+}
+
+.aiot-main {
+    flex: 0 0 75%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.aiot-main-col {
+    flex: 0 0 calc(100%/3);
+    padding: 5px;
+}
+
+.aiot-side-col {
+    height: 100%;/* 高度會照著父層走 */
+    padding: 5px;
+}
+
+.aiot-text {
+    background-color: #cab;
+    margin-top: auto;
+    padding: 5px;
+}
+
+.aiot-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #bca;
+    height: 100%;
+}
+
+.aiot-item img {
+    transition: 500ms;
+}
+
+.aiot-item:hover img {
+    transform: scale(1.32);
+}
+
+.aiot-cover {
+    height: 100%;
+    background-color: #cba;
+    overflow: hidden;
+}
+
+.aiot-cover img{
+    height: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+/* info */
+#info {
+    padding-bottom: 50px;
+}
+
+.info-top-item {
+    flex: 0 0 25%;
+    text-align: center;
+    padding-block: 50px;
+}
+
+#info span {
+    display: block;
+    margin-top: 20px;
+}
+
+.info-bottom-item {
+    flex: 0 0 50%;
+    padding-inline: 10px;
+}
+
+.info-card {
+    position: relative;
+}
+
+.info-card img {
+    height: 100%;
+    object-fit: cover;
+    transition: 500ms;
+}
+
+.info-img {
+    aspect-ratio: 32/9;
+    overflow: hidden;
+}
+
+.info-card:hover .info-text {
+    background-color: rgb(0 0 0/ .5);
+    color: floralwhite;
+}
+
+.info-card:hover img{
+    transform: scale(1.23);
+}
+
+.info-text {
+    position: absolute;
+    background-color: rgb(255 255 255/ .5);
+    width: 100%;/* 因為位置改成絕對位置，寬度變成只有內容的部分 */
+    bottom: 0;
+    padding: 10px;
+
+    transition: 250ms;
+}
+
+/* footer */
+footer {
+    border-top: 2px solid aquamarine;
+    padding-top: 25px;
+}
+
+.footer-item {
+    flex: 0 0 20%;
+}
+
+.footer-item h3 {
+    margin-bottom: 20px;
+}
+
+.footer-item li {
+    list-style: none;
+    line-height: 25px;
+    /*同等於 margin-bottom: 15px; */
+}
+
+.copyright-item {
+    flex: 0 0 50%;
+    background-color: #cab;
+    padding-block: 15px;
+}
+
+.copyright-item:last-of-type {
+    text-align: right;
+}
+
+footer hr {
+    margin-block: 20px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    background-color: rgb(179, 164, 189);
+    background-image: url('../images/002.jpg');
+    background-repeat: no-repeat;
+/*  background-repeat: repeat-x; x軸重複
+    background-repeat: repeat-y; y軸重複
+    background-repeat: repeat; x、y軸重複*/
+    /* background-position: center; */
+/*  background-position: 200px 150px;
+    等同於
+    background-position-x: 200px;
+    background-position-y: 150px;
+    表以左上角開始，往右200px、往下150px
+    使用關鍵字(top、bottom、left、right、center)時，以內容為基準，而非視窗 */
+    /* background-attachment: fixed; */
+    /* 
+    scroll 隨著內容大小固定在"背景"，不會隨著滾輪跟著移動
+    fixed  固定在"視窗"中，使其跟著滾輪移動*/
+    /* background-size: contain; */
+    /* 
+    contain 不超過原圖大小
+    cover   滿版(等寬或等高、可能破壞原圖)
+    假圖網站：https://picsum.photos/*/

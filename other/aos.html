@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            width: 100%;
+            position: fixed;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: rgb(0 0 0 / .5);
+            backdrop-filter: blur(5px);
+            gap:30px;
+            z-index: 99999;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header {
+            height: 100vh;
+            clip-path:polygon(0 0,100% 0 , 100% calc(100% - 10vw),0 100%);
+        }
+        section:nth-of-type(1){
+            margin-top: -10vw;
+        }
+        section {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            width: min(1200px , 90%);
+            gap:30px;
+            margin-inline: auto;
+            align-items: center;
+        }
+        .col {
+            flex: 1 0 0;
+        }
+        #about {background-color: rgb(88, 190, 178);}
+        #service {background-color: #ace;}
+        #contact {background-color: #0ce;}
+        .banner {
+            height: 400px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">home</a>
+        <a href="#about">about</a>
+        <a href="#service">service</a>
+        <a href="#contact">contact</a>
+    </nav>
+    <header>
+        <img src="https://picsum.photos/id/92/1600/1000" alt="" class="cover">
+    </header>
+    <section id="about">
+        <div class="container">
+            <div class="col" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="100">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="500">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="900">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="banner">
+        <img src="https://picsum.photos/id/77/1600/800" alt="" class="thumbnail">
+    </section>
+    <section id="service">
+        <div class="container">
+            <div class="col" data-aos="fade-right">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="fade-left">
+                <img src="https://picsum.photos/id/77/800" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="col" data-aos="fade-right">
+                <img src="https://picsum.photos/id/96/800" alt="">
+            </div>
+            <div class="col" data-aos="fade-left">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="col" data-aos="flip-left" data-aos-delay="100">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="flip-left" data-aos-delay="500">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="flip-left" data-aos-delay="900">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <script>
+        AOS.init({
+            offset:0,
+            // anchorPlacement: 'center-bottom'
+        });
+        var image = document.getElementsByClassName('thumbnail');
+        let cover = document.querySelector('.cover')
+        new simpleParallax(image,{
+            orientation: 'right',
+            delay: 1,
+            scale:2
+        });
+        new simpleParallax(cover,{
+            delay: .6,
+            orientation:'down',
+            scale:1.5
+        })
+    </script>
+</body>
+</html>

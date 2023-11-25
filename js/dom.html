@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0922_dom</title>
+</head>
+<body>
+    <h1>title</h1>
+    <p>
+        案件證實協調不懂是個沉默預計消息並不是。
+    </p>
+    <div class="container">
+        <h2 id="title">title2</h2>
+        <p class="info">針對研究，眼裡機器指標使得春天焦點幾乎是從改進將。</p>
+        <ul class="list">
+            <li class="item">List1</li>
+            <li class="item">List2</li>
+            <li class="item">List3</li>
+            <li class="item">List4</li>
+            <li class="item">List5</li>
+        </ul>
+    </div>
+    <script>
+        //dom document object model
+
+
+        //query selector(唯一)
+        let el = document.querySelector('.item');
+        console.log(el);
+
+        // query selector all
+        let els = document.querySelectorAll('.item');
+        console.log(els);
+
+        // get element
+        let title = document.getElementById('title');
+
+        let subtitle = document.getElementsByClassName('subtitle')
+        let items = document.getElementsByClassName('item')
+
+        let p = document.getElementsByTagName('p');
+
+        // console.log(title);
+        // console.log(subtitle);
+        // console.log(items);
+        // console.log(p);
+
+        let NodeList = document.querySelectorAll('.item');
+        let Collection = document.getElementsByClassName('item');
+        console.log(NodeList, Collection);
+
+        let nl = NodeList.length;
+        let cl = Collection.length;
+        console.log(nl, cl);
+
+        NodeList[2].remove();
+
+        nl = NodeList.length;
+        cl = Collection.length;
+        console.log(nl,cl);
+
+        // let newNode = Array.from(NodeList);
+        // let newColl = Array.from(Collection);
+
+        let newNode = [...NodeList];
+        let newColl = Array.from(Collection);
+        console.log(newNode, newColl);
+
+
+    </script>
+</body>
+</html>

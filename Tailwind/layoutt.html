@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0908_tailwind_layoutt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        .btn {
+            @apply flex h-16 bg-slate-900 items-center px-4 hover:bg-slate-800 duration-150 fixed z-50 w-full;
+        }
+
+        .btn-text {
+            @apply  text-slate-100 duration-150 hover:text-orange-300;
+        }
+    
+        .btn-amber {
+            @apply inline-block px-6 py-1 bg-rose-400 rounded-lg hover:bg-rose-900 duration-300 hover:text-white;
+        }
+
+        #portfolio a:hover figcaption{
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body >
+    <nav class="btn"><!-- 表padding-x要空出4*4=16px -->
+        <a href="#" class="mr-4 btn-text">Logo</a>
+        <div class="space-x-4">
+            <a href="#aboutme" class="btn-text">ABOUT</a>
+            <a href="#portfolio" class="btn-text">WORK</a>
+            <a href="#services" class="btn-text">SERVICE</a>
+        </div>
+        <div class="ml-auto space-x-4">
+            <a href="#" class="btn-text">REGISTER</a>
+            <a href="#" class="btn-text">LOGIN</a>
+        </div>
+    </nav>
+    <header class="relative aspect-[21/9]">
+        <img src="https://picsum.photos/id/64/1600/900" alt="" class="w-full h-full object-cover">
+        <div class="absolute bg-white/20 inset-0 m-auto md:w-1/2 w-10/12 h-fit text-center space-y-4 p-3 rounded-xl backdrop-blur">
+            <h1 class="text-6xl font-bold">HELLO</h1>
+            <p class="md:block hidden"> 總是電腦咱們求購英語其它魅力始終簽名藥物彩色有機會感興趣，手續穩定規定吸引種種身材理解轎車，人間減肥條款零售自主線上請教絶對成長掌握，遊客常常以及購物知識給予規則無關更是較高位於是不是，將來財務，好多全面便是也有意大利靈魂，配套韓國法院通用著名發展培養採。</p>
+            <a href="#" class="btn-amber">MORE</a>
+        </div>
+    </header>
+    <section class="py-24 bg-lime-50" id="aboutme">
+        <div class="lg:w-[900px] w-10/12 mx-auto flex flex-wrap items-center py-16">
+            <div class="lg:w-1/3 sm:w-1/2  w-full p-8">
+                <div class="rounded-full overflow-hidden">
+                    <img src="https://picsum.photos/id/65/600/600" alt="" class="h-full w-full object-cover">
+                </div>
+            </div>
+            <div class="lg:w-2/3 sm:1/2 w-full sm:pl-8 text-center sm:text-left">
+                <h2 class="text-3xl font-bold">title</h2>
+                <div class="text-xl mb-4">hello</div>
+                <p class="leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus soluta nemo, tempora dolorum officia iure voluptate reiciendis sed in maxime exercitationem ea aperiam necessitatibus vitae voluptatibus odio debitis quis a obcaecati odit dignissimos id. Eligendi at beatae sit exercitationem doloribus voluptate asperiores vitae reiciendis minima. Nam deleniti ab officia delectus.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="flex flex-wrap py-16">
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/66/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/67/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/68/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/69/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/70/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/71/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/72/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/73/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/74/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/75/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/76/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="xl:w-1/6 lg:w-1/4 sm:w-1/3 w-1/2 ">
+                <a href="#" class="block">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/77/800/600" alt="" class="w-full h-full object-cover">
+                        <figcaption class="absolute bg-gray-300/50 w-full bottom-0 text-center translate-y-full duration-300">img 1</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="bg-teal-50" id="services">
+        <div class="container flex flex-wrap mx-auto py-16">
+            <div class="md:w-1/3 w-full md:p-4 py-4 px-16">
+                <div class="text-center rounded-lg shadow-lg shadow-slate-700 border border-zinc-500 overflow-hidden">
+                    <h3 class="text-xl font-bold py-6 bg-rose-400/70">平面設計</h3>
+                    <ul class="divide-y divide-zinc-500 border-t border-zinc-500 bg-stone-50">
+                        <li class="py-4">企業識別</li>
+                        <li class="py-4">企業識別</li>
+                        <li class="py-4">企業識別</li>
+                        <li class="py-4">企業識別</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="md:w-1/3 w-full md:p-4 py-4 px-16">
+                <div class="text-center rounded-lg shadow-lg shadow-slate-700 border border-zinc-500 overflow-hidden">
+                    <h3 class="text-xl font-bold py-6 bg-emerald-400/70">平面設計</h3>
+                    <ul class="divide-y divide-zinc-500 border-t border-zinc-500 bg-stone-50">
+                        <li class="py-4">企業識別</li>
+                        <li class="py-4">企業識別</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="md:w-1/3 w-full md:p-4 py-4 px-16">
+                <div class="text-center rounded-lg shadow-lg shadow-slate-700 border border-zinc-500 overflow-hidden">
+                    <h3 class="text-xl font-bold py-6 bg-sky-400/70">平面設計</h3>
+                    <ul class="divide-y divide-zinc-500 border-t border-zinc-500 bg-stone-50">
+                        <li class="py-4">企業識別</li>
+                        <li class="py-4">企業識別</li>
+                        <li class="py-4">企業識別</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="p-16 bg-amber-50">
+        <div class="w-2/3 mx-auto sm:w-1/2">
+            <form action="">
+                <div>
+                    <label for="" class="block mb-2">姓名</label>
+                    <input type="text" class="border border-zinc-900 w-full p-2 rounded-lg"> 
+                </div>
+                <div>
+                    <label for="" class="block mb-2">連絡電話</label>
+                    <input type="text" class="border border-zinc-900 w-full p-2 rounded-lg"> 
+                </div>
+                <div>
+                    <label for="" class="block mb-2">Email</label>
+                    <input type="text" class="border border-zinc-900 w-full p-2 rounded-lg"> 
+                </div>
+                <div>
+                    <label for="" class="block mb-2">內容</label>
+                    <textarea name="" id="" cols="30" rows="10" class="border border-zinc-900 w-full p-2 rounded-lg"></textarea>
+                </div>
+                <div class="text-right">
+                    <input type="submit" class="bg-violet-200 px-5 py-2 rounded-lg ">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="flex bg-zinc-800 text-zinc-50 px-3 py-5 justify-between text-sm" value="送出">
+        <div>
+            COPYRIGHTS&copy;2023.All Rights Reserved
+        </div>
+        <div>
+            Design By KaoDavid
+        </div>
+    </footer>
+    <button>
+        <a href="#" class=" right-0 bottom-0 fixed rounded-sm bg-lime-400">top</a>
+    </button>
+</body>
+</html>

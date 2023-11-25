@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0825_flex_2</title>
+    <style>
+         * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /*  */
+        }
+
+        .box {
+            padding: 15px;
+
+            flex-basis: 300px;
+            /* flex-direction為row時，flex-basis表寬度且優先權大於width
+               flex-direction為column時，flex-basis表高度且優先權大於height
+               flex-grow (延展)
+               預設值為0(沒有延展)
+            */
+
+            flex-shrink: 10;
+            /* flex-shrink (壓縮) 預設值為1<有壓縮，但會跟換行(flex-wra: wrap)衝突> */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quidem adipisci quam eligendi non repellat ullam quas ducimus accusamus excepturi perspiciatis ad obcaecati vitae magnam earum, ratione soluta officia expedita quibusdam error vel, laudantium ab? Repellendus quibusdam est beatae expedita distinctio non omnis, quae nobis deleniti? Fuga voluptates tenetur reprehenderit!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quidem adipisci quam eligendi non repellat ullam quas ducimus accusamus excepturi perspiciatis ad obcaecati vitae magnam earum, ratione soluta officia expedita quibusdam error vel, laudantium ab? Repellendus quibusdam est beatae expedita distinctio non omnis, quae nobis deleniti? Fuga voluptates tenetur reprehenderit!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quidem adipisci quam eligendi non repellat ullam quas ducimus accusamus excepturi perspiciatis ad obcaecati vitae magnam earum, ratione soluta officia expedita quibusdam error vel, laudantium ab? Repellendus quibusdam est beatae expedita distinctio non omnis, quae nobis deleniti? Fuga voluptates tenetur reprehenderit!
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>

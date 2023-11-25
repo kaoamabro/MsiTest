@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        section:nth-of-type(1) {
+            width: 100%;
+            height: 100vh;
+            background-color: #fa0;
+
+            /* clip-path: circle(); */
+            clip-path: polygon(0 0,100% 0,100% calc(100% - 15vw),0 100%);
+            /* clip-path: polygon(0 0,100% 0,100% 70%,50% 100%,0 70%); */
+            position: relative;
+            z-index: 10;
+            background-image:url('https://picsum.photos/id/65/1600/900');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        section:nth-of-type(2) {
+            width: 100%;
+            /* height: 500px; */
+            background-color: #098;
+            margin-top: -15vw;
+            padding-top: 25vw;
+            padding-bottom: 25vw;
+            clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 15vw));
+            position: relative;
+            z-index: 9;
+        }
+        section:nth-of-type(3) {
+            width: 100%;
+            /* background-color: #545; */
+            position: relative;
+            z-index: 8;
+            margin-top: -15vw;
+            padding-top: 20vw;
+            padding-bottom: 20vw;
+            background-image:url('https://picsum.photos/id/35/1600/900');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            clip-path: polygon(0 0,100% 0,100% calc(100% - 15vw),0 100%);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap:20px;
+            width: min(1200px, 90%);
+            margin-inline: auto;
+        }
+        .col {
+            flex:1 0 0;
+        }
+        .left {
+            width: 50%;
+            padding: 30px;
+            border-radius: 5px;
+            background-color: rgb(255 255 255 / .3);
+        }
+        footer {
+            background-color: #222;
+            color: #eee;
+            margin-top: -15vw;
+            padding-top: 20vw;
+            text-align: center;
+            padding-bottom: 5vw;
+
+        }
+        nav {
+            background-color: rgb(10 10 10 / .4);
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 30px;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            backdrop-filter: blur(5px);
+        }
+        nav a {
+            color: #eee;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+    </nav>
+    <section></section>
+    <section>
+        <div class="container">
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque officia, sunt eaque repellat aliquid distinctio molestiae at obcaecati quisquam sed fuga voluptates, ullam quas aspernatur unde voluptatem nulla reiciendis dolore?
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque officia, sunt eaque repellat aliquid distinctio molestiae at obcaecati quisquam sed fuga voluptates, ullam quas aspernatur unde voluptatem nulla reiciendis dolore?
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque officia, sunt eaque repellat aliquid distinctio molestiae at obcaecati quisquam sed fuga voluptates, ullam quas aspernatur unde voluptatem nulla reiciendis dolore?
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="left">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae possimus perferendis vero aliquid assumenda, velit vel harum minus ab unde voluptatibus tenetur numquam asperiores aut architecto rerum inventore corrupti commodi?
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>copyrigh&copy;2023.Design By Zac</div>
+    </footer>
+</body>
+</html>

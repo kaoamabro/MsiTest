@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0825_flex_2</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        width: 600px;
+        height: 600px;
+        background-color: #159;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    h1 {
+        background-color: aliceblue;
+    }
+
+    p {
+        background-color: burlywood;
+    }
+
+    a {
+        background-color: crimson;
+        margin-top: auto;
+    }
+</style>
+<body>
+    <div class="box">
+        <h1>title</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, est. Error praesentium nesciunt soluta molestias aspernatur amet dolore iusto velit laborum adipisci dolorem sunt rerum autem, voluptates ratione laudantium natus aliquam odit modi magnam inventore. Ducimus fugit doloremque ut dolorem iure accusantium, quisquam libero aperiam similique amet veritatis. Sint, aut.
+        </p>
+        <a href="#">更多內容</a><!-- 行內元素在flex裡面可以當作區塊來看 -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0922_gallery</title>
+    <style>
+        .thumb-container {
+            display: flex;
+            width: 1000px;
+        }
+
+        .thumb {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/100/600" alt="" class="main">
+        <div class="thumb-container">
+            <img src="https://picsum.photos/id/100/600" alt="" class="thumb" >
+            <img src="https://picsum.photos/id/200/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/300/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/400/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/500/600" alt="" class="thumb">
+        </div>
+    </div>
+    <script>
+        let thumbs = document.querySelectorAll('.thumb');
+        //console.log(thumbs);
+        for (let t of thumbs) {
+            t.onclick = function() {
+                //console.log(this);
+                let newSrc = this.getAttribute('src');
+                console.log(newSrc);
+                document.querySelector('.main').setAttribute('src',newSrc);
+            }
+        }
+    </script>
+</body>
+</html>

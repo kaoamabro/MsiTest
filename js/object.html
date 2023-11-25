@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0920_object</title>
+</head>
+<body>
+    <script>
+        //const User = new Object();
+        const food = {};
+        food.name = '滷肉飯';
+        food.price = '190';
+        console.log(food);
+
+        const foods = [
+            {
+                id: 1,
+                name:'滷肉飯',
+                price:'190'
+            },
+            {
+                id: 1,
+                name:'牛肉麵',
+                price:'300'
+            }
+        ];
+
+        for (let f of foods) {
+            console.log(f.name);
+            console.log(f.price);
+        }
+    </script>
+</body>
+</html>
